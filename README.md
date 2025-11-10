@@ -23,6 +23,7 @@ pip install -r requirements.txt
 # Конфигурация
 cp config/.env.example config/.env
 nano config/.env
+```
 
 # Пример config/.env
 VCSA_HOST=vcsa.example.com
