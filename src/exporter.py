@@ -41,7 +41,7 @@ def export_report(data, mode):
         logger.info(f"JSON выведен в stdout")
 
     elif mode == "json-n8n":
-        json_output = df.to_json(orient="records")
+        json_output = df.to_dict(orient="records")
         output = {"status": True, "data": json_output}
         print(json.dumps(output, ensure_ascii=False, indent=2))
         logger.info(f"JSON выведен в stdout")
