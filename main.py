@@ -16,7 +16,7 @@ def setup_logging():
     """
     root_dir = Path(__file__).resolve().parent
 
-    logs_dir = os.path.join(root_dir, "logs_dir")
+    logs_dir = os.path.join(root_dir, "logs")
     reports_dir = os.path.join(root_dir, "reports")
     
     os.makedirs(logs_dir, exist_ok=True)
