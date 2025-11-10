@@ -40,6 +40,7 @@ def main():
     group.add_argument("--get-excel", action="store_true", help="export to .xlsx")
     group.add_argument("--get-csv", action="store_true", help="export to .csv")
     group.add_argument("--get-json", action="store_true", help="return to stdout json")
+    group.add_argument("--get-json-n8n", action="store_true", help="return to stdout json for n8n format")
     
     # дополнительные опции
     parser.add_argument("--quiet", action="store_true", help="only critical logs")
@@ -81,6 +82,8 @@ def main():
             export_report(results, mode="csv")
         elif args.get_json:
             export_report(results, mode="json")
+        elif args.get_json_n8n:
+            export_report(results, mode="json-n8n")
 
     except Exception as e:
         logger.critical(f"Критическая ошибка: {e}")

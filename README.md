@@ -35,6 +35,13 @@ VCSA_PASS=YourStrongPass!
 
 ## Использование
 
+### Quiet Mode 
+Отображение только критичных логов
+
+```bash
+python main.py --quiet 
+```
+
 ### Excel
 ```bash
 python main.py --get-excel
@@ -48,6 +55,11 @@ python main.py --get-csv
 ### JSON (для API, Ansible, Python)
 ```bash
 python main.py --get-json
+```
+
+### JSON для N8N с параметром status (можно использовать в IF-Node)
+```bash
+python main.py --get-json-n8n
 ```
 
 ## Пример вывода

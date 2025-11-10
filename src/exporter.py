@@ -40,5 +40,11 @@ def export_report(data, mode):
         print(json_output)
         logger.info(f"JSON выведен в stdout")
 
+    elif mode == "json-n8n":
+        json_output = df.to_json(orient="records")
+        output = {"status": True, "data": json_output}
+        print(json.dumps(output, ensure_ascii=False, indent=2))
+        logger.info(f"JSON выведен в stdout")
+
     else:
         raise ValueError(f"Некорректный аргумент: {mode}")
