@@ -25,25 +25,33 @@ cp config/.env.example config/.env
 nano config/.env
 ```
 
-# Пример config/.env
+## Пример config/.env
+```bash
 VCSA_HOST=vcsa.example.com
 VCSA_PORT=443
 VCSA_USER=administrator@vsphere.local
 VCSA_PASS=YourStrongPass!
+```
 
 ## Использование
 
-# Excel
+### Excel
+```bash
 python main.py --get-excel
+```
 
-# CSV
+### CSV
+```bash
 python main.py --get-csv
+```
 
-# JSON (для API, Ansible, Python)
+### JSON (для API, Ansible, Python)
+```bash
 python main.py --get-json
+```
 
 ## Пример вывода
-
+```json
 [
   {
     "instanceUuid": "123abc...",
@@ -52,5 +60,5 @@ python main.py --get-json
     "Network Info": "192.168.1.2 (local-vlan1 up);\n 10.0.0.2 (local-vlan2 up);\nno_ip (ext-vlan3 down)" # IP_address (network_name link_status)
   }
 ]
-
+```
 
